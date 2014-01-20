@@ -80,6 +80,21 @@
     }
   };
 
+  pjs.each = function(collection, iterator) {
+    if (pjs.isArray(collection)) {
+      for (var i = 0; i < collection.length; i++) {
+        iterator(collection[i], i, collection);
+      }
+    } else {
+      for (var key in collection) {
+        if (collection.hasOwnProperty(key)) {
+          iterator(collection[key], key, collection);
+        }
+      }
+
+    }
+  };
+
 
   if (typeof exports !== 'undefined') {
     if (typeof module !== 'undefined' && module.exports) {
