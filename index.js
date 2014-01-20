@@ -95,6 +95,16 @@
     }
   };
 
+  pjs.indexOf = function(collection, target, start) {
+    start = start || 0;
+    var length = collection.length-1;
+    for (var i = 0 + start; i < length; i++) {
+      if (collection[i] === target) {
+        return i;
+      }
+    }
+    return -1;
+  };
 
   if (typeof exports !== 'undefined') {
     if (typeof module !== 'undefined' && module.exports) {
