@@ -1,3 +1,26 @@
+describe('is undefined', function() {
+  var uniqueObject = {};
+  var uniqueArray = [];
+  var randomIndex = Math.floor(Math.random() * 8);
+
+  it('should return a boolean value if the value is not defined', function() {
+    expect(pjs.isUndefined(1)).to.equal(false);
+
+    expect(pjs.isUndefined(0)).to.equal(false);
+
+    expect(pjs.isUndefined('string')).to.equal(false);
+
+    expect(pjs.isUndefined(undefined)).to.equal(true);
+
+    expect(pjs.isUndefined(uniqueArray[randomIndex])).to.equal(true);
+
+    expect(pjs.isUndefined(uniqueArray)).to.equal(false);
+
+    expect(pjs.isUndefined(false)).to.equal(false);
+
+    expect(pjs.isUndefined(uniqueObject)).to.equal(false);
+  });
+});
 describe('identity', function() {
   var uniqueObject = {};
 
