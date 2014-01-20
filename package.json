@@ -1,0 +1,57 @@
+{
+  "name": "patrick.js",
+  "version": "0.0.0",
+  "description": "PatrickJS framework made by gdi2290",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --harmony server.js"
+  },
+  "author": [
+    {
+      "name": "Patrick Stapleton",
+      "email": "github@gdi2290.com",
+      "url": "www.gdi2290.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/gdi2290/patrick.js.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "keywords": [
+    "PatrickJS",
+    "gdi2290",
+    "patrick.js",
+    "angular",
+    "seed",
+    "angularjs",
+    "koajs"
+  ],
+  "dependencies": {
+    "koa": "latest",
+    "koa-render": "latest",
+    "koa-route": "latest",
+    "koa-logger": "latest",
+    "jade": "latest",
+    "koa-static": "~1.4.2"
+  },
+  "devDependencies": {
+    "tiny-lr": "0.0.5",
+    "gulp": "latest",
+    "gulp-stylus": "latest",
+    "gulp-livereload": "~0.2.0",
+    "gulp-concat": "~2.1.7",
+    "gulp-browserify": "~0.2.4",
+    "gulp-clean": "~0.2.2",
+    "gulp-imagemin": "~0.1.4",
+    "gulp-ngmin": "~0.1.1"
+  },
+  "engines": {
+    "node": "0.11.x"
+  }
+}
