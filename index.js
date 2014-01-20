@@ -33,6 +33,10 @@
   var pjs = {};
   global.pjs = pjs;
 
+  pjs.isDefined = function(value) {
+    return typeof value !== 'undefined';
+  };
+
   pjs.identity = function(value) {
     return value;
   };
