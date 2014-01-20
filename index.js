@@ -41,6 +41,10 @@
     return typeof value !== 'undefined';
   };
 
+  pjs.isArray = function(value) {
+    return Array.isArray(value);
+  };
+
   pjs.identity = function(value) {
     return value;
   };
