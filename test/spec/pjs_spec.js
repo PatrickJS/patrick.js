@@ -21,6 +21,31 @@ describe('is undefined', function() {
     expect(pjs.isUndefined(uniqueObject)).to.equal(false);
   });
 });
+
+describe('is defined', function() {
+  var uniqueObject = {};
+  var uniqueArray = [];
+  var randomIndex = Math.floor(Math.random() * 8);
+
+  it('should return a boolean value if the value is defined', function() {
+    // expect(pjs.isDefined(1)).to.equal(true);
+
+    // expect(pjs.isDefined(0)).to.equal(true);
+
+    // expect(pjs.isDefined('string')).to.equal(true);
+
+    expect(pjs.isDefined(undefined)).to.equal(false);
+
+    expect(pjs.isDefined(uniqueArray[randomIndex])).to.equal(false);
+
+    expect(pjs.isDefined(uniqueArray)).to.equal(true);
+
+    expect(pjs.isDefined(false)).to.equal(true);
+
+    expect(pjs.isDefined(uniqueObject)).to.equal(true);
+  });
+});
+
 describe('identity', function() {
   var uniqueObject = {};
 
