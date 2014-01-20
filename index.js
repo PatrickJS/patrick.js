@@ -59,6 +59,23 @@
     return _array;
   };
 
+  pjs.last = function(array, index) {
+    var length = array.length-1;
+    if (index > length) {
+      return array;
+    } else if (index === 0) {
+      return [];
+    } else if (pjs.isDefined(index)) {
+      var tempArray = [];
+      for (var i = length; i >= index-1; i--) {
+        tempArray.unshift(array[i]);
+      }
+      return tempArray;
+    } else {
+      return array[length];
+    }
+  };
+
 
   if (typeof exports !== 'undefined') {
     if (typeof module !== 'undefined' && module.exports) {
