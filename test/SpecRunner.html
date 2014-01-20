@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Underscore Test Suite [Mocha]</title>
+    <title>PatrickJS Test Suite</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="lib/css/mocha.css" />
-    <script src="lib/jquery.js"></script>
-    <script src="lib/picomodal.js"></script>
-    <script src="lib/tweetit.js"></script>
+    <link rel="stylesheet" href="lib/mocha.css" />
     <script src="lib/expect.js"></script>
     <script src="lib/mocha.js"></script>
     <script src="lib/sinon.js"></script>
@@ -18,7 +15,7 @@
     </script>
 
     <!-- Load tests and helpers here -->
-    <script src="../../index.js"></script>
+    <script src="../index.js"></script>
     <script src="spec/pjs_spec.js"></script>
 
     <script>
@@ -26,9 +23,7 @@
       onload = function(){
         var runner = window.mochaPhantomJS ? mochaPhantomJS.run() : mocha.run();
         runner.on('end', function() {
-          if(!this.failures){
-            window.tweetit();
-          }
+          console.log('Finished');
         });
       };
     </script>
