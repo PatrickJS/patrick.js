@@ -24,7 +24,7 @@ describe('first', function() {
   });
 });
 
-describe.skip('last', function() {
+describe('last', function() {
   it('should pull the last element from an array', function() {
     expect(pjs.last([1,2,3])).to.equal(3);
   });
@@ -42,7 +42,7 @@ describe.skip('last', function() {
   });
 });
 
-describe.skip('each', function() {
+describe('each', function() {
   it('should iterate over arrays, providing access to the element, index, and array itself', function() {
     var animals = ['ant', 'bat', 'cat'];
     var iterationInputs = [];
@@ -91,7 +91,7 @@ describe.skip('each', function() {
   });
 });
 
-describe.skip('indexOf', function() {
+describe('indexOf', function() {
   it('should have 40 in the list', function() {
     var numbers = [10, 20, 30, 40, 50];
 
@@ -120,7 +120,7 @@ describe.skip('indexOf', function() {
   });
 });
 
-describe.skip('filter', function() {
+describe('filter', function() {
   it('should return all even numbers in an array', function() {
     var isEven = function(num) { return num % 2 === 0; };
     var evens = pjs.filter([1, 2, 3, 4, 5, 6], isEven);
@@ -136,7 +136,7 @@ describe.skip('filter', function() {
   });
 });
 
-describe.skip('reject', function() {
+describe('reject', function() {
   it('should reject all even numbers', function() {
     var isEven = function(num) { return num % 2 === 0; };
     var odds = pjs.reject([1, 2, 3, 4, 5, 6], isEven);
@@ -152,7 +152,7 @@ describe.skip('reject', function() {
   });
 });
 
-describe.skip('uniq', function() {
+describe('uniq', function() {
   it('should return all unique values contained in an unsorted array', function() {
     var list = [1, 2, 1, 3, 1, 4];
 
@@ -167,7 +167,7 @@ describe.skip('uniq', function() {
   });
 });
 
-describe.skip('map', function() {
+describe('map', function() {
   it('should apply a function to every value in an array', function() {
     var doubled = pjs.map([1, 2, 3], function(num) {
       return num * 2;
@@ -177,7 +177,7 @@ describe.skip('map', function() {
   });
 });
 
-describe.skip('pluck', function() {
+describe('pluck', function() {
   it('should return values contained at a user-defined property', function() {
     var people = [
       {name : 'moe', age : 30},
@@ -188,7 +188,7 @@ describe.skip('pluck', function() {
   });
 });
 
-describe.skip('invoke, when provided a function reference', function() {
+describe('invoke, when provided a function reference', function() {
   it('runs the input function on each item in the array, and returns a list of results', function() {
     var reverse = function(){
       return this.split('').reverse().join('');
@@ -200,7 +200,7 @@ describe.skip('invoke, when provided a function reference', function() {
   });
 });
 
-describe.skip('invoke, when provided a method name', function() {
+describe('invoke, when provided a method name', function() {
   it('runs the specified method on each item in the array, and returns a list of results', function() {
     var upperCasedStrings = pjs.invoke(['dog', 'cat'], 'toUpperCase');
 
@@ -208,7 +208,7 @@ describe.skip('invoke, when provided a method name', function() {
   });
 });
 
-describe.skip('reduce', function() {
+describe('reduce', function() {
   it('should be able to sum up an array', function() {
     var add = function(tally, item) {return tally + item; };
     var total = pjs.reduce([1, 2, 3], add, 0);
@@ -218,7 +218,7 @@ describe.skip('reduce', function() {
 
 });
 
-describe.skip('contains', function() {
+describe('contains', function() {
   it('should return false if a collection does not contain a user-specified value', function() {
     expect(pjs.contains([4,5,6], 2)).to.equal(false);
   });
@@ -232,7 +232,7 @@ describe.skip('contains', function() {
   });
 });
 
-describe.skip('every', function() {
+describe('every', function() {
   it('passes by default for an empty collection', function() {
     expect(pjs.every([], pjs.identity)).to.equal(true);
   });
@@ -270,7 +270,7 @@ describe.skip('every', function() {
   });
 });
 
-describe.skip('some', function() {
+describe('some', function() {
   var nativeSome = Array.prototype.some;
   var isEven = function(number){
     return number % 2 === 0;
@@ -318,7 +318,7 @@ describe.skip('some', function() {
   });
 });
 
-describe.skip('extend', function() {
+describe('extend', function() {
   it('returns the first argument', function() {
     var to = {};
     var from = {};
@@ -370,7 +370,7 @@ describe.skip('extend', function() {
   });
 });
 
-describe.skip('defaults', function() {
+describe('defaults', function() {
   var options;
 
   beforeEach(function() {
@@ -421,7 +421,7 @@ describe.skip('defaults', function() {
   });
 });
 
-describe.skip('once', function() {
+describe('once', function() {
   it('should only run a user-defined function if it hasn\'t been run before', function() {
     var num = 0;
     var increment = pjs.once(function() {
@@ -435,7 +435,7 @@ describe.skip('once', function() {
   });
 });
 
-describe.skip('memoize', function() {
+describe('memoize', function() {
   var fib, fastFib;
 
   beforeEach(function() {
@@ -459,7 +459,7 @@ describe.skip('memoize', function() {
   });
 });
 
-describe.skip('delay', function() {
+describe('delay', function() {
   var clock;
 
   beforeEach(function() {
@@ -493,7 +493,7 @@ describe.skip('delay', function() {
   });
 });
 
-describe.skip('shuffle', function() {
+describe('shuffle', function() {
   it('should not modify the original object', function() {
     var numbers = [4, 5, 6];
     var shuffled = pjs.shuffle(numbers).sort();
@@ -503,7 +503,7 @@ describe.skip('shuffle', function() {
   });
 });
 
-describe.skip('sortBy', function() {
+describe('sortBy', function() {
   it('should sort by age', function() {
     var people = [{name : 'curly', age : 50}, {name : 'moe', age : 30}];
     people = pjs.sortBy(people, function(person) {
@@ -553,7 +553,7 @@ describe.skip('sortBy', function() {
   });
 });
 
-describe.skip('flatten', function() {
+describe('flatten', function() {
   it('can flatten nested arrays', function() {
     var nestedArray = [1, [2], [3, [[[4]]]]];
 
@@ -561,7 +561,7 @@ describe.skip('flatten', function() {
   });
 });
 
-describe.skip('zip', function() {
+describe('zip', function() {
   it('should zip together arrays of different lengths', function() {
     var names = ['moe', 'larry', 'curly'], ages = [30, 40, 50], leaders = [true];
 
@@ -573,7 +573,7 @@ describe.skip('zip', function() {
   });
 });
 
-describe.skip('intersection', function() {
+describe('intersection', function() {
   it('should take the set intersection of two arrays', function() {
     var stooges = ['moe', 'curly', 'larry'];
     var leaders = ['moe', 'groucho'];
@@ -582,7 +582,7 @@ describe.skip('intersection', function() {
   });
 });
 
-describe.skip('difference', function() {
+describe('difference', function() {
   it('should return the difference between two arrays', function() {
     var diff = pjs.difference([1,2,3], [2,30,40]);
 
@@ -596,7 +596,7 @@ describe.skip('difference', function() {
   });
 });
 
-describe.skip('throttle', function() {
+describe('throttle', function() {
   it('throttled functions should only be able to be called again after the specified time', function(done) {
     var counter = 0;
     var incr = function() {
@@ -652,5 +652,5 @@ describe.skip('throttle', function() {
       expect(results[5]).to.eql(3);
       done();
     }, 192);
-  })
+  });
 });
