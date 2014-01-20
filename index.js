@@ -30,8 +30,12 @@
     nativeBind         = FuncProto.bind;
 
   // Start PatrickJS
-  global.pjs = {};
+  var pjs = {};
+  global.pjs = pjs;
 
+  pjs.identity = function(value) {
+    return value;
+  };
 
 
   if (typeof exports !== 'undefined') {

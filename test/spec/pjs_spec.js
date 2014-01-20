@@ -12,7 +12,7 @@ describe('identity', function() {
   });
 });
 
-describe.skip('first', function() {
+describe('first', function() {
   it('should be able to pull out the first element of an array', function() {
     expect(pjs.first([1,2,3])).to.equal(1);
   });
