@@ -33,6 +33,10 @@
   var pjs = {};
   global.pjs = pjs;
 
+  pjs.isUndefined = function(value) {
+    return typeof value === 'undefined';
+  };
+
   pjs.isDefined = function(value) {
     return typeof value !== 'undefined';
   };
