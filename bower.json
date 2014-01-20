@@ -1,0 +1,37 @@
+{
+  "name": "patrick.js",
+  "version": "0.0.0",
+  "homepage": "https://github.com/gdi2290/patrick.js",
+  "description": "PatrickJS framework made by gdi2290",
+  "authors": [
+    "gdi2290 <github@gdi2290.com>"
+  ],
+  "keywords": [
+    "PatrickJS",
+    "gdi2290",
+    "patrick.js",
+    "angular",
+    "seed",
+    "angularjs",
+    "koajs"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "*.yml",
+    "node_modules",
+    "bower_components",
+    "example",
+    "tests",
+    "test"
+  ],
+  "dependencies": {
+    "jquery": "latest",
+    "angular": "1.2.8",
+    "angular-route": "1.2.8",
+    "angular-animate": "1.2.8"
+  },
+  "devDependencies": {
+
+  }
+}
