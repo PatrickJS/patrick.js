@@ -19,12 +19,18 @@ gulp.task('test', function() {
     }));
 });
 
+gulp.task('lr-server', function(cb) {
+  server.listen(35729, function(err) {
+    if (err) return console.log(err);
+  });
+});
+
 gulp.task('pjs', function(cb) {
+  gulp.run('lr-server');
 
   gulp.watch(testFiles, function(event) {
     return gulp.src(testFiles)
       .pipe(refresh(server));
-
   });
 
 });
