@@ -45,6 +45,20 @@
     return value;
   };
 
+  pjs.first = function(array, index) {
+    if (pjs.isUndefined(index)) return array[0];
+    var _array = [];
+    if (index) {
+      for (var i = 0; i < index; i++) {
+        var temp = array[i];
+        if (pjs.isDefined(temp)) {
+          _array.push(temp);
+        }
+      }
+    }
+    return _array;
+  };
+
 
   if (typeof exports !== 'undefined') {
     if (typeof module !== 'undefined' && module.exports) {
