@@ -4,8 +4,8 @@
   "description": "PatrickJS framework made by gdi2290",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --harmony server.js"
+    "test": "gulp test",
+    "start": "grunt"
   },
   "author": [
     {

@@ -8,7 +8,6 @@ var testFiles = [
 ];
 
 gulp.task('test', function() {
-  // Be sure to return the stream
   return gulp.src(testFiles)
     .pipe(karma({
       configFile: 'test/karma.conf.js',
