@@ -1,7 +1,7 @@
 {
   "name": "patrick.js",
   "version": "0.0.0",
-  "description": "PatrickJS framework made by gdi2290",
+  "description": "PatrickJS, my personal framework and utility library",
   "main": "index.js",
   "scripts": {
     "test": "gulp test",
