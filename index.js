@@ -130,6 +130,20 @@
   var handlers = {};
   var pubsub = {};
 
+  pjs.publish = pjs.pub = function(event) {
+    pjs.checkEvent(event);
+
+    if (!handlers[event]) {
+      return;
+    }
+
+    var ctx = { event: event, args: slice.call(arguments, 1) };
+
+    for (var i = 0, l = handlers[event].length; i < l; i++) {
+      handlers[event][i].apply(ctx, ctx.args);
+    }
+
+  };
   if (pjs.isDefined(exports)) {
     if (pjs.isDefined(module) && module.exports) {
       exports = module.exports = pjs;
