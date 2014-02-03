@@ -150,6 +150,44 @@
     pjs.checkHandler(handler);
     (handlers[event] = handlers[event] || []).push(handler);
   };
+
+
+  pjs.unsubscribe = pjs.unsub = function() {
+    var args = slice.call(arguments);
+    var event, handler, i, l;
+
+    if (args.length >= 2) {
+      event = args[0];
+      handler = args[1];
+
+      pjs.checkEvent(event);
+      pjs.checkHandler(handler);
+
+      if (!handlers[event]) {
+        return;
+      }
+
+      for (i = 0, l = handlers[event].length; i < l; i++) {
+        if (handlers[event][i] === handler) {
+          handlers[event].splice(i, 1);
+        }
+      }
+    } else {
+      handler = args[0];
+
+      pjs.checkHandler(handler);
+
+      for (event in handlers) {
+        for (i = 0, l = handlers[event].length; i < l; i++) {
+          if (handlers[event][i] === handler) {
+            handlers[event].splice(i, 1);
+          } // end handlers in event
+        } // end for loop
+      } // end for event
+    } // end else
+  }; // end sub
+
+
   if (pjs.isDefined(exports)) {
     if (pjs.isDefined(module) && module.exports) {
       exports = module.exports = pjs;
