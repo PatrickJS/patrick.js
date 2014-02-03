@@ -121,6 +121,11 @@
     }
   };
 
+  pjs.checkHandler = function(handler) {
+    if (!pjs.isFunction(handler)) {
+      throw new TypeError('Handler is not a function');
+    }
+  };
   if (pjs.isDefined(exports)) {
     if (pjs.isDefined(module) && module.exports) {
       exports = module.exports = pjs;
