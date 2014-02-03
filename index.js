@@ -114,8 +114,8 @@
     return -1;
   };
 
-  if (typeof exports !== 'undefined') {
-    if (typeof module !== 'undefined' && module.exports) {
+  if (pjs.isDefined(exports)) {
+    if (pjs.isDefined(module) && module.exports) {
       exports = module.exports = pjs;
     }
     exports.pjs = pjs;
