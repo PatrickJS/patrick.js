@@ -126,6 +126,10 @@
       throw new TypeError('Handler is not a function');
     }
   };
+
+  var handlers = {};
+  var pubsub = {};
+
   if (pjs.isDefined(exports)) {
     if (pjs.isDefined(module) && module.exports) {
       exports = module.exports = pjs;
