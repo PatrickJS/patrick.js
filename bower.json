@@ -1,6 +1,6 @@
 {
   "name": "patrick.js",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "homepage": "https://github.com/gdi2290/patrick.js",
   "description": "PatrickJS, my personal framework and utility library",
   "authors": [
@@ -26,10 +26,9 @@
     "test"
   ],
   "dependencies": {
-    "jquery": "latest",
-    "angular": "1.2.8",
-    "angular-route": "1.2.8",
-    "angular-animate": "1.2.8"
+    "angular": "1.2.10",
+    "angular-route": "1.2.10",
+    "angular-animate": "1.2.10"
   },
   "devDependencies": {
 
