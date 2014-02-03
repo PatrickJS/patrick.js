@@ -114,6 +114,13 @@
     return -1;
   };
 
+
+  pjs.checkEvent = function(event) {
+    if (pjs.isString(event)) {
+      throw new TypeError('Event is not a string.');
+    }
+  };
+
   if (pjs.isDefined(exports)) {
     if (pjs.isDefined(module) && module.exports) {
       exports = module.exports = pjs;
