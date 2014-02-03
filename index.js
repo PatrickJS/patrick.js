@@ -144,6 +144,12 @@
     }
 
   };
+
+  pjs.subscribe = pjs.sub = function(event, handler) {
+    pjs.checkEvent(event);
+    pjs.checkHandler(handler);
+    (handlers[event] = handlers[event] || []).push(handler);
+  };
   if (pjs.isDefined(exports)) {
     if (pjs.isDefined(module) && module.exports) {
       exports = module.exports = pjs;
