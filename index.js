@@ -49,6 +49,10 @@
     return Array.isArray(value);
   };
 
+  pjs.isString = function(value){
+    return typeof value === 'string';
+  };
+
   pjs.identity = function(value) {
     return value;
   };
