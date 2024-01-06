@@ -1,6 +1,6 @@
 {
   "name": "patrick.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "PatrickJS, my personal framework and utility library",
   "main": "index.js",
   "scripts": {
@@ -10,8 +10,8 @@
   "author": [
     {
       "name": "Patrick Stapleton",
-      "email": "github@gdi2290.com",
-      "url": "www.gdi2290.com"
+      "email": "github@patrickjs.com",
+      "url": "https://patrickjs.com"
     }
   ],
   "repository": {
@@ -26,14 +26,9 @@
   "keywords": [
     "PatrickJS",
     "gdi2290",
-    "patrick.js",
-    "angular",
-    "seed",
-    "angularjs",
-    "koajs"
+    "patrick.js"
   ],
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "mocha": "~1.17.0",
     "tiny-lr": "0.0.5",
